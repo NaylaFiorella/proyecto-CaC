@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: lightcyan;
+    background-color: #555555;
 }
 
 /* HEADER */
@@ -107,7 +107,6 @@ main div {
     padding: 10px;
     margin: 10px auto;
     /*border: 1px solid #111;*/
-    border-radius: 5px;
     box-shadow: 0 0 5px #222;
 }
 
