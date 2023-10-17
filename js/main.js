@@ -1,4 +1,4 @@
-document.getElementById("links").innerHTML = `
+document.querySelector("header").innerHTML = `
     <ul>
         <li><a href="index.html">INICIO</a></li>
         <li><a href="comprar.html">COMPRAR</a></li>
