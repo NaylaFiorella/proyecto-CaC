@@ -3,15 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>AGLM - Comprar</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <div id="links"><!--JavaScript--></div>
+    </header>
     <main>
-        <h1>COMPRAR</h1>
+        <br><br><br>
+        <div id="app">
+            <h1>COMPRAR</h1>
+            <div class="propiedad" v-for="prop in datos">
+                <img :src="prop.imagen" :alt="prop.descrip">
+                <h3>{{prop.descrip}}</h3>
+                <h2>U&#36D {{prop.precio}}</h2>
+                <h3>{{prop.superf.total}} <span>m&#178 totales,</span> {{prop.superf.cubierta}} <span>m&#178 cubiertos</span></h3>
+                <h3>{{prop.espacios.ambient}} <span>ambientes,</span> {{prop.espacios.banos}} <span>baños</span></h3>
+            </div>
+        </div>
     </main>
-    <footer></footer>
+    <footer><!--JavaScript--></footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/apiconnect.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
