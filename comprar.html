@@ -18,13 +18,19 @@
         <br><br><br>
         <div id="app">
             <h1>COMPRAR</h1>
-            <div class="propiedad" v-for="prop in datos">
-                <img :src="prop.imagen" :alt="prop.descrip">
-                <h3>{{prop.descrip}}</h3>
-                <h2>U&#36D {{prop.precio}}</h2>
-                <h3>{{prop.superf.total}} <span>m&#178 totales,</span> {{prop.superf.cubierta}} <span>m&#178 cubiertos</span></h3>
-                <h3>{{prop.espacios.ambient}} <span>ambientes,</span> {{prop.espacios.banos}} <span>baños</span></h3>
-            </div>
+            <div class="propiedad col-2 col-s-3" v-for="prop in datos">
+                <div>
+                    <a href="#">
+                        <img :src="prop.imagen" :alt="prop.descrip">
+                        <h3 class="descrip">{{prop.descrip}}</h3>
+                        <h2>U&#36D&#160{{prop.precio}}</h2>
+                        <h3>{{prop.superf.total}}&#160<span>m&#178&#160totales</span></h3>
+                        <h3>{{prop.superf.cubierta}}&#160<span>m&#178&#160cubiertos</span></h3>
+                        <h3>{{prop.espacios.ambient}}&#160<span>ambientes</span></h3>
+                        <h3>{{prop.espacios.banos}}&#160<span>baños</span></h3>
+                    </a>
+                </div>
+            </div>   
         </div>
     </main>
     <footer><!--JavaScript--></footer>

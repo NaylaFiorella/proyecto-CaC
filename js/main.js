@@ -3,7 +3,7 @@ document.querySelector("header").innerHTML = `
         <li><a href="index.html">INICIO</a></li>
         <li><a href="comprar.html">COMPRAR</a></li>
         <li><a href="contacto.html">CONTACTO</a></li>
-        <li><a href="login.html">INICIAR SESIÓN</a></li>
+        <li><a href="login.html"><img src="./img/user.png" alt="Iniciar sesión">&#160<span>INICIAR SESIÓN</span></a></li>
     </ul>
 `
 document.querySelector("footer").innerHTML = `
