@@ -11,19 +11,23 @@
     <title>AGLM - Iniciar Sesión</title>
 </head>
 <body>
-    <header>
-        <div id="links"><!--JavaScript--></div>
-    </header>
+    <header><!--JavaScript--></header>
     <main>
         <br><br><br>
-        <h1>LOGIN</h1>
-        <form id="login">
-            <label for="userName">USUARIO:</label><br>
-            <input type="text" name="user" id="userName"><br>
-            <label for="password">CONTRASEÑA:</label><br>
-            <input type="password" name="password" id="password"><br>
-            <input type="submit" value="ENVIAR">
-        </form>
+        <div class="login col-3 col-s-3">
+            <div>
+                <form onsubmit="return validar();">
+                    <h1>INICIAR SESIÓN</h1>
+                    <label for="userName">USUARIO:</label><br>
+                    <input type="text" name="user" id="userName"><br>
+                    <div id="errorUser">Debe ingresar un nombre de usuario</div>
+                    <label for="password">CONTRASEÑA:</label><br>
+                    <input type="password" name="password" id="password"><br>
+                    <div id="errorPass">Debe ingresar una contraseña</div>
+                    <input type="submit" value="ENVIAR">
+                </form>
+            </div>
+        </div>
     </main>
     <footer><!--JavaScript--></footer>
     <script src="./js/main.js"></script>

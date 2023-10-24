@@ -22,9 +22,12 @@ body {
     padding: 0;
     margin: 0;
     background-color: #FFF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-
+/*----------------------------------------------------------------*/
 /* HEADER */
 
 header {
@@ -55,7 +58,7 @@ header li {
 header a {
     display: block;
     padding: 10px 20px;
-    font-family: 'Raleway', Arial, sans-serif;
+    font-family: Raleway, Arial, sans-serif;
     text-decoration: none;
     letter-spacing: 2px;
 }
@@ -98,8 +101,31 @@ header li:last-child {
     right: 0px;
 }
 
-
+/*----------------------------------------------------------------*/
 /*MAIN*/
+
+main div {
+    position: relative;
+    box-sizing: border-box;
+    width: 90%;
+    font-family: Raleway, Arial, sans-serif;
+    text-align: center;
+    background-color: #DDD;
+    color: #000;
+    padding: 10px;
+    margin: 10px auto;
+    /*border: 1px solid #111;*/
+    box-shadow: 0 0 5px #222;
+}
+
+main h1 {
+    margin: 0;
+    font-family: Raleway, Arial, sans-serif;
+    font-weight: lighter;
+}
+
+/*----------------------------------------------------------------*/
+/*INDEX*/
 
 main .ban {
     position: relative;
@@ -127,7 +153,7 @@ main .ban h1 {
     position: absolute;
     padding: 0 30px;
     text-align: right;
-    font-family: 'Bitter', Times, serif;
+    font-family: Bitter, Times, serif;
     color: #FFF;
     text-shadow: 0 0 10px #000;
     bottom: 0px;
@@ -141,19 +167,8 @@ main .ban h1 {
     }
 }
 
-main div {
-    position: relative;
-    box-sizing: border-box;
-    width: 90%;
-    font-family: 'Raleway', Arial, sans-serif;
-    text-align: center;
-    background-color: #DDD;
-    color: #000;
-    padding: 10px;
-    margin: 10px auto;
-    /*border: 1px solid #111;*/
-    box-shadow: 0 0 5px #222;
-}
+/*----------------------------------------------------------------*/
+/*COMPRAR*/
 
 #app {
     background-color: #FFF;
@@ -210,16 +225,37 @@ main div {
     height: 100px;
 }
 
-main h1 {
-    margin: 0;
-    font-family: 'Raleway', Arial, sans-serif;
-    font-weight: lighter;
+/*----------------------------------------------------------------*/
+/*LOGIN*/
+
+.login {
+    float: left;
+    background-color: #FFF;
+    box-shadow: none;
+    text-align: left;
 }
 
+main label {
+    font-family: Raleway, Arial, sans-serif;
+}
 
+[id*="error"] {
+    width: auto;
+    padding: 0;
+    margin: 0 0 10px;
+    background-color: #FFF;
+    color: #B02;
+    position: static;
+    box-shadow: none;
+    text-align: left;
+    visibility: hidden;
+}
+
+/*----------------------------------------------------------------*/
 /*FOOTER*/
 
 footer {
+    margin-top: auto;
     background-color: #107;
     color: #FFF;
     font-family: 'Raleway', Arial, sans-serif;
