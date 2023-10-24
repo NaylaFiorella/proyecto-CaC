@@ -118,10 +118,37 @@ main div {
     box-shadow: 0 0 5px #222;
 }
 
-main h1 {
+main h1, main h2 {
     margin: 0;
     font-family: Raleway, Arial, sans-serif;
     font-weight: lighter;
+}
+
+.formul {
+    float: left;
+    background-color: #FFF;
+    box-shadow: none;
+}
+
+.submitBut {
+    box-shadow: none;
+    width: 70%;
+    padding: 0;
+}
+
+input[type=submit] {
+    width: 100%;
+    font-family: Raleway, Arial, sans-serif;
+    font-size: x-large;
+    color: #FFF;
+    background-color: #107;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 599px) {
+    .submitBut {width: 100%;}
+    input[type=submit] {font-size: larger;}
 }
 
 /*----------------------------------------------------------------*/
@@ -196,7 +223,7 @@ main .ban h1 {
     max-width: 80%;
     padding: 20px;
     transform: scale(1, 1);
-    transition: transform 0.5s;
+    transition: transform 0.25s;
 }
 
 .propiedad img:hover {
@@ -226,14 +253,43 @@ main .ban h1 {
 }
 
 /*----------------------------------------------------------------*/
+/*CONTACTO*/
+
+#contact {
+    background-color: #FFF;
+    width: auto;
+    padding: 0%;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+#sendMail {text-align: left;}
+
+h4 {
+    text-align: right;
+    width: 95%;
+    font-weight: lighter;
+}
+
+@media screen and (max-width: 599px) {
+    #sendMail, h4 {text-align: center;}
+}
+
+iframe {
+    width: 90%;
+}
+
+/*----------------------------------------------------------------*/
 /*LOGIN*/
 
-.login {
-    float: left;
-    background-color: #FFF;
-    box-shadow: none;
-    text-align: left;
-}
+#signup {text-align: left;}
+
+#login {text-align: right;}
 
 main label {
     font-family: Raleway, Arial, sans-serif;
@@ -243,12 +299,20 @@ main label {
     width: auto;
     padding: 0;
     margin: 0 0 10px;
-    background-color: #FFF;
+    background-color: #DDD;
     color: #B02;
     position: static;
     box-shadow: none;
-    text-align: left;
     visibility: hidden;
+}
+
+[id*="errorR-"] {text-align: left;}
+
+[id*="error-"] {text-align: right;}
+
+@media screen and (max-width: 599px) {
+    #signup, #login {text-align: center;}
+    [id*="errorR-"], [id*="error-"] {text-align: center;}
 }
 
 /*----------------------------------------------------------------*/

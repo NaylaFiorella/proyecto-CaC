@@ -15,25 +15,47 @@ document.querySelector("footer").innerHTML = `
     <h6>2023 GLM PROPIEDADES, BUENOS AIRES, ARGENTINA</h6>
 `
 
-function validar() {
+function validReg() {
+    let user = document.getElementById("userNameR");
+    let pass = document.getElementById("passwordR");
+    let passRep = document.getElementById("passRepR");
+    let error = false;
+    document.getElementById("errorR-user").style.visibility = "hidden";
+    document.getElementById("errorR-pass").style.visibility = "hidden";
+    document.getElementById("errorR-passRep").style.visibility = "hidden";
+    if(passRep.value != pass.value) {
+        document.getElementById("errorR-passRep").style.visibility = "visible";
+        passRep.focus();
+        error = true;
+    }
+    if(pass.value.length < 8) {
+        document.getElementById("errorR-pass").style.visibility = "visible";
+        pass.focus();
+        error = true;
+    }
+    if(user.value.length < 5) {
+        document.getElementById("errorR-user").style.visibility = "visible";
+        user.focus();
+        error = true;
+    }
+    return !error;
+}
+
+function validLog() {
     let user = document.getElementById("userName");
     let pass = document.getElementById("password");
     let error = false;
-    document.getElementById("errorUser").style.visibility = "hidden";
-    document.getElementById("errorPass").style.visibility = "hidden";
+    document.getElementById("error-user").style.visibility = "hidden";
+    document.getElementById("error-pass").style.visibility = "hidden";
     if(pass.value == "") {
-        document.getElementById("errorPass").style.visibility = "visible";
+        document.getElementById("error-pass").style.visibility = "visible";
         pass.focus();
         error = true;
     }
     if(user.value == "") {
-        document.getElementById("errorUser").style.visibility = "visible";
+        document.getElementById("error-user").style.visibility = "visible";
         user.focus();
         error = true;
-    }
-    if(!error) {
-        document.getElementById("userName").innerHTML = "";
-        document.getElementById("password").innerHTML = "";
     }
     return !error;
 }

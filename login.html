@@ -14,17 +14,40 @@
     <header><!--JavaScript--></header>
     <main>
         <br><br><br>
-        <div class="login col-3 col-s-3">
-            <div>
-                <form onsubmit="return validar();">
-                    <h1>INICIAR SESIÓN</h1>
+        <div class="formul col-3 col-s-6">
+            <div id="signup">
+                <h2 style="text-align: center;">¿AÚN NO REGISTRADO?</h2>
+                <form onsubmit="return validReg();">
+                    <br>
+                    <label for="userNameR">USUARIO:</label><br>
+                    <input type="text" name="userR" id="userNameR"><br>
+                    <div id="errorR-user">El nombre de usuario debe contener un mínimo de cinco caracteres</div>
+                    <label for="passwordR">CONTRASEÑA:</label><br>
+                    <input type="password" name="passwordR" id="passwordR"><br>
+                    <div id="errorR-pass">La contraseña debe contener un mínimo de ocho caracteres</div>
+                    <label for="passRepR">REPETIR CONTRASEÑA:</label><br>
+                    <input type="password" name="passRepR" id="passRepR"><br>
+                    <div id="errorR-passRep">Las contraseñas no coinciden</div>
+                    <div class="submitBut">
+                        <input type="submit" value="REGISTRARSE">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="formul col-3 col-s-6">
+            <div id="login">
+                <h2 style="text-align: center;">¿YA TENÉS UNA CUENTA?</h2>
+                <form onsubmit="return validLog();">
+                    <br>
                     <label for="userName">USUARIO:</label><br>
                     <input type="text" name="user" id="userName"><br>
-                    <div id="errorUser">Debe ingresar un nombre de usuario</div>
+                    <div id="error-user">Debe ingresar un nombre de usuario</div>
                     <label for="password">CONTRASEÑA:</label><br>
                     <input type="password" name="password" id="password"><br>
-                    <div id="errorPass">Debe ingresar una contraseña</div>
-                    <input type="submit" value="ENVIAR">
+                    <div id="error-pass">Debe ingresar una contraseña</div>
+                    <div class="submitBut">
+                        <input type="submit" value="INICIAR SESIÓN">
+                    </div>
                 </form>
             </div>
         </div>
@@ -33,3 +56,10 @@
     <script src="./js/main.js"></script>
 </body>
 </html>
+
+<!--<a href="https://www.flaticon.es/iconos-gratis/logotipo-de-instagram" title="logotipo de instagram iconos">Logotipo de instagram iconos creados por Freepik - Flaticon</a>-->
+<!--<a href="https://www.flaticon.es/iconos-gratis/facebook" title="facebook iconos">Facebook iconos creados por Freepik - Flaticon</a>-->
+<!--<a href="https://www.flaticon.es/iconos-gratis/whatsapp" title="whatsapp iconos">Whatsapp iconos creados por Freepik - Flaticon</a>-->
+<!--<a href="https://www.flaticon.es/iconos-gratis/insignia-social-de-twitter" title="insignia social de twitter iconos">Insignia social de twitter iconos creados por Freepik - Flaticon</a>-->
+<!--<a href="https://www.flaticon.es/iconos-gratis/avatar-de-hombre" title="avatar de hombre iconos">Avatar de hombre iconos creados por riajulislam - Flaticon</a>-->
+<!--<a href="https://www.flaticon.es/iconos-gratis/ui" title="ui iconos">Ui iconos creados por Nurlaili - Flaticon</a>-->
