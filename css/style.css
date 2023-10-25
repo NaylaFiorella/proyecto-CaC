@@ -1,3 +1,10 @@
+:root {
+    --back: #DDD;
+    --card: #FFF;
+    --title: #000;
+    --field: #EEE;
+}
+
 [class*="col-"] {width: 100%;}
 
 @media screen and (min-width: 600px) {
@@ -21,7 +28,8 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #FFF;
+    font-family: Raleway, Arial, sans-serif;
+    background-color: var(--back);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -58,7 +66,6 @@ header li {
 header a {
     display: block;
     padding: 10px 20px;
-    font-family: Raleway, Arial, sans-serif;
     text-decoration: none;
     letter-spacing: 2px;
 }
@@ -85,9 +92,7 @@ header a:link, header a:visited {
 }
 
 header a:hover {
-    /*color: #BBBBBB;*/
     background-color: #109;
-    /*background-color: rgba(0, 0, 0, 0.3);*/
 }
 
 header a:active {
@@ -104,29 +109,30 @@ header li:last-child {
 /*----------------------------------------------------------------*/
 /*MAIN*/
 
+main {
+    background-color: var(--back);
+}
+
 main div {
     position: relative;
     box-sizing: border-box;
     width: 90%;
-    font-family: Raleway, Arial, sans-serif;
     text-align: center;
-    background-color: #DDD;
+    background-color: var(--card);
     color: #000;
     padding: 10px;
     margin: 10px auto;
-    /*border: 1px solid #111;*/
     box-shadow: 0 0 5px #222;
 }
 
 main h1, main h2 {
     margin: 0;
-    font-family: Raleway, Arial, sans-serif;
     font-weight: lighter;
 }
 
 .formul {
     float: left;
-    background-color: #FFF;
+    background-color: var(--back);
     box-shadow: none;
 }
 
@@ -134,6 +140,12 @@ main h1, main h2 {
     box-shadow: none;
     width: 70%;
     padding: 0;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    width: 60%;
+    border: 1px solid #000;
+    background-color: var(--field);
 }
 
 input[type=submit] {
@@ -147,6 +159,7 @@ input[type=submit] {
 }
 
 @media screen and (max-width: 599px) {
+    input[type=text], input[type=password], input[type=email] {width: 100%;}
     .submitBut {width: 100%;}
     input[type=submit] {font-size: larger;}
 }
@@ -163,7 +176,6 @@ main .ban {
     margin: 0%;
     padding: 0px;
     background-color: #000;
-    /*background-image: url("../img/banner.jpg");*/
 }
 
 main .ban img {
@@ -194,15 +206,96 @@ main .ban h1 {
     }
 }
 
+.item1 {grid-area: aside;}
+.item2 {grid-area: pic;}
+.item3 {grid-area: txt;}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        'aside pic pic'
+        'aside pic pic'
+        'aside txt txt';
+    width: 100%;
+    gap: 10px;
+    padding: 30px;
+    background-color: var(--back);
+    box-shadow: none;
+}
+
+[class*="item"] {
+    width: 100%;
+    height: 100%;
+}
+
+.item1 {
+    background-color: var(--back);
+    box-shadow: none;
+    letter-spacing: 5px;
+    line-height: 100px;
+}
+
+.item2 {
+    background-color: var(--back);
+    box-shadow: none;
+    padding: 0;
+}
+
+.item2 img {
+    width: 100%;
+    padding: 0%;
+    box-shadow: 0 0 5px #222;
+}
+
+.item3 {
+    background-color: var(--back);
+    box-shadow: none;
+    letter-spacing: 3px;
+    font-family: Bitter, Times, serif;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        grid-template-areas: 
+            'txt aside'
+            'pic pic';
+    }
+    .item1 {line-height: normal;}
+    .item3 {font-size: small;}
+}
+
+@media screen and (max-width: 599px) {
+    .container {
+        grid-template-areas:
+            'txt'
+            'aside'
+            'pic';
+    }
+    .item1 {
+        font-size: small;
+        letter-spacing: normal;
+    }
+}
+
 /*----------------------------------------------------------------*/
 /*COMPRAR*/
 
 #app {
-    background-color: #FFF;
+    background-color: var(--back);
     width: auto;
     padding: 0%;
     box-shadow: none;
     box-sizing: border-box;
+}
+
+#app h1 {
+    color: var(--title);
+    font-family: Bitter, Times, serif;
+    font-size: 50px;
+}
+
+@media screen and (max-width: 599px) {
+    #app h1 {font-size: 40px;}
 }
 
 #app::after {
@@ -215,7 +308,7 @@ main .ban h1 {
     float: left;
     padding: 15px;
     margin: auto;
-    background-color: #FFF;
+    background-color: var(--back);
     box-shadow: none;
 }
 
@@ -227,7 +320,7 @@ main .ban h1 {
 }
 
 .propiedad img:hover {
-    transform: scale(1.1, 1.1);
+    transform: scale(1.05, 1.05);
 }
 
 .propiedad a {
@@ -256,14 +349,21 @@ main .ban h1 {
 /*CONTACTO*/
 
 #contact {
-    background-color: #FFF;
+    background-color: var(--back);
     width: auto;
     padding: 0%;
     box-shadow: none;
     box-sizing: border-box;
 }
 
+#contact h1 {
+    color: var(--title);
+    font-family: Bitter, Times, serif;
+    font-size: 50px;
+}
+
 textarea {
+    background-color: var(--field);
     width: 100%;
     resize: none;
 }
@@ -277,6 +377,7 @@ h4 {
 }
 
 @media screen and (max-width: 599px) {
+    #contact h1 {font-size: 40px;}
     #sendMail, h4 {text-align: center;}
 }
 
@@ -291,15 +392,11 @@ iframe {
 
 #login {text-align: right;}
 
-main label {
-    font-family: Raleway, Arial, sans-serif;
-}
-
 [id*="error"] {
     width: auto;
     padding: 0;
     margin: 0 0 10px;
-    background-color: #DDD;
+    background-color: var(--card);
     color: #B02;
     position: static;
     box-shadow: none;
@@ -322,7 +419,6 @@ footer {
     margin-top: auto;
     background-color: #107;
     color: #FFF;
-    font-family: 'Raleway', Arial, sans-serif;
     letter-spacing: 2px;
     text-align: center;
     padding: 10px;
